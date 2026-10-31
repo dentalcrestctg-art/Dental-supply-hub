@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Supply Hub - Your Trusted Source</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#1d72b8',
+                            600: '#0f5b99',
+                            700: '#0d4777',
+                            800: '#0a355a',
+                            900: '#072542',
+                        },
+                        bkash: '#e2136e'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+        .logo-gradient {
+            background: radial-gradient(circle, #e6f4ff 0%, #a4d5ff 50%, #1d72b8 100%);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-900 text-white text-xs py-2 px-4 shadow-inner">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
+                <span class="flex items-center gap-1.5"><i class="fa-solid me-1 fa-location-dot text-brand-500"></i> Rajshahi, Bangladesh</span>
+                <span class="hidden md:inline">|</span>
+                <span class="flex items-center gap-1.5"><i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i> WhatsApp / bKash: <strong class="text-white tracking-wide">01410093006</strong></span>
+            </div>
+            <div class="flex items-center gap-4 text-slate-300">
+                <span class="flex items-center gap-1"><i class="fa-solid fa-truck-fast text-xs text-brand-500"></i> Cash on Delivery Nationwide</span>
+                <span>|</span>
+                <button onclick="switchTab('tracking')" class="hover:text-white transition">Order Tracking</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation / Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between gap-4">
+            
+            <!-- Brand Logo -->
+            <div onclick="switchTab('shop')" class="flex items-center gap-3 cursor-pointer group">
+                <!-- Custom SVG Replica of Dental Supply Hub Logo -->
+                <div class="relative w-14 h-14 rounded-full p-1 border-2 border-brand-500 shadow-md bg-white flex items-center justify-center transition-transform group-hover:scale-105">
+                    <svg viewBox="0 0 200 200" class="w-full h-full">
+                        <defs>
+                            <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#2575fc" />
+                                <stop offset="100%" stop-color="#0b4182" />
+                            </linearGradient>
+                            <linearGradient id="silverRing" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#e0e0e0" />
+                                <stop offset="50%" stop-color="#ffffff" />
+                                <stop offset="100%" stop-color="#999999" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Outer Rim -->
+                        <circle cx="100" cy="100" r="95" fill="url(#silverRing)" stroke="#1d72b8" stroke-width="3"/>
+                        <circle cx="100" cy="100" r="86" fill="#e8f4fc" stroke="#1d72b8" stroke-width="2"/>
+                        <!-- Shield BG -->
+                        <path d="M 100 25 C 130 25, 155 35, 155 65 C 155 115, 100 145, 100 145 C 100 145, 45 115, 45 65 C 45 35, 70 25, 100 25 Z" fill="url(#shieldGrad)" stroke="#b0c4de" stroke-width="2"/>
+                        <!-- White Tooth -->
+                        <path d="M 100 38 C 115 38, 138 48, 138 68 C 138 88, 130 115, 122 135 C 118 135, 114 125, 108 110 C 103 98, 97 98, 92 110 C 86 125, 82 135, 78 135 C 70 115, 62 88, 62 68 C 62 48, 85 38, 100 38 Z" fill="#ffffff" />
+                        <!-- Gear inside Tooth -->
+                        <g transform="translate(100,75) scale(0.65)" fill="#0f5b99">
+                            <path d="M-6,-25 H6 V-18 H-6 Z M-6,18 H6 V25 H-6 Z M-25,-6 V6 H-18 V-6 Z M18,-6 V6 H25 V-6 Z M-18,-18 L-13,-13 L-18,-8 L-23,-13 Z M13,13 L18,18 L13,23 L8,18 Z M-18,8 L-13,13 L-18,18 L-23,13 Z M13,-13 L18,-18 L13,-23 L8,-18 Z" />
+                            <circle cx="0" cy="0" r="16" fill="#0f5b99"/>
+                            <circle cx="0" cy="0" r="9" fill="#ffffff"/>
+                        </g>
+                        <!-- Swoosh Arc -->
+                        <path d="M 35 100 A 70 30 20 0 1 165 70" fill="none" stroke="#2db3ff" stroke-width="8" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-xs tracking-wider uppercase font-semibold text-slate-500 block leading-none">YOUR TRUSTED SOURCE</span>
+                    <h1 class="text-lg sm:text-xl font-extrabold text-brand-900 tracking-tight leading-snug">DENTAL SUPPLY HUB</h1>
+                </div>
+            </div>
+
+            <!-- Global Actions & Search Bar -->
+            <div class="flex items-center gap-3">
+                <nav class="hidden lg:flex items-center gap-6 font-medium text-slate-700 text-sm">
+                    <button onclick="switchTab('shop')" id="nav-shop" class="hover:text-brand-600 transition py-1 border-b-2 border-brand-600 font-semibold text-brand-600">Shop Catalog</button>
+                    <button onclick="switchTab('tracking')" id="nav-tracking" class="hover:text-brand-600 transition py-1 border-b-2 border-transparent">Track Order</button>
+                    <button onclick="switchTab('admin')" id="nav-admin" class="hover:text-brand-600 transition py-1 border-b-2 border-transparent text-slate-600"><i class="fa-solid fa-user-shield me-1"></i> Admin Portal</button>
+                </nav>
+
+                <!-- Customer Account Button -->
+                <button onclick="toggleAuthModal()" class="p-2 text-slate-600 hover:text-brand-600 rounded-lg hover:bg-slate-100 transition relative" title="Customer Login">
+                    <i class="fa-regular fa-circle-user text-xl"></i>
+                    <span id="user-badge" class="hidden absolute top-1 right-1 w-2.5 h-2.5 bg-emerald-500 rounded-full"></span>
+                </button>
+
+                <!-- Cart Button -->
+                <button onclick="toggleCartDrawer()" class="flex items-center gap-2 bg-brand-50 hover:bg-brand-100 text-brand-700 font-semibold px-3.5 py-2 rounded-xl transition border border-brand-200 relative">
+                    <i class="fa-solid fa-cart-shopping text-lg text-brand-600"></i>
+                    <span class="hidden sm:inline text-sm">Cart</span>
+                    <span id="cart-count" class="bg-brand-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sub-nav for mobile -->
+    <div class="lg:hidden bg-white border-b border-slate-200 py-2 px-4 flex justify-around text-xs font-semibold text-slate-600">
+        <button onclick="switchTab('shop')" class="hover:text-brand-600 flex items-center gap-1"><i class="fa-solid fa-store"></i> Shop</button>
+        <button onclick="switchTab('tracking')" class="hover:text-brand-600 flex items-center gap-1"><i class="fa-solid fa-truck"></i> Track Order</button>
+        <button onclick="switchTab('admin')" class="hover:text-brand-600 flex items-center gap-1"><i class="fa-solid fa-lock"></i> Admin Portal</button>
+    </div>
+
+    <!-- MAIN VIEW CONTAINER -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+        <!-- ================= VIEW 1: SHOP CATALOG ================= -->
+        <section id="view-shop" class="space-y-6">
+            
+            <!-- Hero Banner -->
+            <div class="relative bg-gradient-to-r from-brand-900 via-brand-700 to-brand-600 rounded-2xl p-6 sm:p-10 text-white overflow-hidden shadow-lg">
+                <div class="relative z-10 max-w-2xl">
+                    <span class="bg-brand-500/40 text-brand-100 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3 border border-brand-400/30">Official Rajshahi Distributor</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-2">Premium Dental Equipment & Supplies</h2>
+                    <p class="text-slate-200 text-sm sm:text-base mb-6">High-grade Rotary NiTi Files, Burs, Composites & Equipment delivered straight to your dental clinic across Bangladesh.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#products-list" class="bg-white text-brand-800 font-bold px-5 py-2.5 rounded-xl hover:bg-slate-100 transition shadow text-sm">Explore Products</a>
+                        <a href="https://wa.me/8801410093006" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-5 py-2.5 rounded-xl transition shadow text-sm flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Direct Order
+                        </a>
+                    </div>
+                </div>
+                <!-- Background Graphic Accent -->
+                <i class="fa-solid fa-tooth opacity-10 text-9xl absolute -right-6 -bottom-6 text-white pointer-events-none"></i>
+            </div>
+
+            <!-- Filters & Search Bar -->
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
+                <!-- Search Input -->
+                <div class="relative w-full md:w-96">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                    <input type="text" id="search-input" oninput="renderProducts()" placeholder="Search files, burs, equipment..." class="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </div>
+
+                <!-- Category Pills -->
+                <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-none" id="category-pills">
+                    <!-- Dynamic Pills rendered via JS -->
+                </div>
+            </div>
+
+            <!-- Product Grid Header -->
+            <div class="flex justify-between items-center" id="products-list">
+                <h3 class="text-lg font-bold text-slate-800" id="catalog-title">All Products</h3>
+                <span class="text-xs text-slate-500 font-medium" id="product-count-badge">Showing items</span>
+            </div>
+
+            <!-- Product Grid -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Product Cards Rendered JS -->
+            </div>
+        </section>
+
+        <!-- ================= VIEW 2: ORDER TRACKING ================= -->
+        <section id="view-tracking" class="hidden space-y-6 max-w-2xl mx-auto py-8">
+            <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm text-center">
+                <div class="w-16 h-16 bg-brand-50 text-brand-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">Track Your Dental Order</h2>
+                <p class="text-slate-600 text-sm mb-6">Enter your unique Order ID (e.g. <span class="font-mono bg-slate-100 px-1.5 py-0.5 rounded text-brand-700">DS-1001</span>) provided upon checkout.</p>
+                
+                <div class="flex gap-2 max-w-md mx-auto mb-6">
+                    <input type="text" id="track-id-input" placeholder="Enter Order ID" class="flex-grow px-4 py-2.5 border border-slate-300 rounded-xl font-mono uppercase focus:ring-2 focus:ring-brand-500 outline-none">
+                    <button onclick="trackOrder()" class="bg-brand-600 hover:bg-brand-700 text-white font-bold px-6 py-2.5 rounded-xl transition">Track</button>
+                </div>
+
+                <!-- Result Container -->
+                <div id="tracking-result" class="hidden text-left border-t border-slate-100 pt-6">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= VIEW 3: ADMIN DASHBOARD ================= -->
+        <section id="view-admin" class="hidden space-y-6">
+            <!-- Admin Security Banner -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center bg-slate-900 text-white p-4 sm:p-6 rounded-2xl gap-4">
+                <div>
+                    <h2 class="text-xl font-bold flex items-center gap-2"><i class="fa-solid fa-sliders text-brand-500"></i> Dental Hub Control Panel</h2>
+                    <p class="text-xs text-slate-400">Manage real-time inventory, pricing, and process clinic orders.</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button onclick="openAddProductModal()" class="bg-brand-500 hover:bg-brand-600 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition flex items-center gap-1.5 shadow">
+                        <i class="fa-solid fa-plus"></i> Add New Product
+                    </button>
+                </div>
+            </div>
+
+            <!-- Admin Sub Navigation Tabs -->
+            <div class="flex border-b border-slate-200 gap-6 text-sm font-semibold text-slate-600">
+                <button onclick="switchAdminSubTab('orders')" id="admin-tab-orders" class="pb-3 border-b-2 border-brand-600 text-brand-600 flex items-center gap-2">
+                    <i class="fa-solid fa-boxes-packing"></i> Customer Orders <span id="admin-pending-badge" class="bg-amber-500 text-white text-xs px-2 py-0.5 rounded-full">0</span>
+                </button>
+                <button onclick="switchAdminSubTab('products')" id="admin-tab-products" class="pb-3 border-b-2 border-transparent hover:text-brand-600 flex items-center gap-2">
+                    <i class="fa-solid fa-boxes-stacked"></i> Inventory Management
+                </button>
+            </div>
+
+            <!-- SUB-TAB 1: ORDERS MANAGEMENT -->
+            <div id="admin-orders-section" class="space-y-4">
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm text-slate-600">
+                            <thead class="bg-slate-50 text-slate-700 uppercase text-xs font-semibold border-b border-slate-200">
+                                <tr>
+                                    <th class="py-3.5 px-4">Order ID</th>
+                                    <th class="py-3.5 px-4">Customer Info</th>
+                                    <th class="py-3.5 px-4">Payment Method</th>
+                                    <th class="py-3.5 px-4">Total Amount</th>
+                                    <th class="py-3.5 px-4">Status</th>
+                                    <th class="py-3.5 px-4 text-right">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-orders-table" class="divide-y divide-slate-100">
+                                <!-- Rendered via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUB-TAB 2: PRODUCT MANAGEMENT -->
+            <div id="admin-products-section" class="hidden space-y-4">
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm text-slate-600">
+                            <thead class="bg-slate-50 text-slate-700 uppercase text-xs font-semibold border-b border-slate-200">
+                                <tr>
+                                    <th class="py-3.5 px-4">Product</th>
+                                    <th class="py-3.5 px-4">Category</th>
+                                    <th class="py-3.5 px-4">Price (BDT)</th>
+                                    <th class="py-3.5 px-4">Stock Status</th>
+                                    <th class="py-3.5 px-4 text-right">Manage</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-products-table" class="divide-y divide-slate-100">
+                                <!-- Rendered via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-8 border-t border-slate-800 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center gap-2 text-white font-bold text-base mb-3">
+                    <i class="fa-solid fa-tooth text-brand-500"></i> DENTAL SUPPLY HUB
+                </div>
+                <p class="leading-relaxed mb-3">Your trusted source for all authentic medical & dental supplies in Rajshahi and across Bangladesh.</p>
+                <p class="text-slate-500">&copy; 2026 Dental Supply Hub. All Rights Reserved.</p>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold text-sm mb-3">Contact & Support</h4>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand-500"></i> Rajshahi, Bangladesh</li>
+                    <li class="flex items-center gap-2"><i class="fa-brands fa-whatsapp text-emerald-400"></i> +880 1410093006</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-mobile-screen text-bkash"></i> bKash Personal: 01410093006</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold text-sm mb-3">Payment Methods</h4>
+                <div class="flex flex-wrap gap-2 text-slate-300">
+                    <span class="bg-slate-800 px-3 py-1.5 rounded border border-slate-700 flex items-center gap-1.5 font-semibold text-white"><i class="fa-solid fa-hand-holding-dollar text-emerald-400"></i> Cash on Delivery</span>
+                    <span class="bg-slate-800 px-3 py-1.5 rounded border border-slate-700 flex items-center gap-1.5 font-semibold text-white"><span class="text-bkash font-black">bKash</span> Direct</span>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold text-sm mb-3">Quick Navigation</h4>
+                <ul class="space-y-1.5">
+                    <li><button onclick="switchTab('shop')" class="hover:text-white transition">Product Catalog</button></li>
+                    <li><button onclick="switchTab('tracking')" class="hover:text-white transition">Order Status Check</button></li>
+                    <li><button onclick="switchTab('admin')" class="hover:text-white transition">Admin Portal</button></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= MODALS & DRAWERS ================= -->
+
+    <!-- SHOPPING CART DRAWER -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm transition-opacity" onclick="toggleCartDrawer()"></div>
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col">
+                <!-- Cart Header -->
+                <div class="p-4 sm:p-6 bg-slate-900 text-white flex justify-between items-center">
+                    <h3 class="font-bold text-lg flex items-center gap-2"><i class="fa-solid fa-bag-shopping text-brand-500"></i> Your Cart</h3>
+                    <button onclick="toggleCartDrawer()" class="text-slate-400 hover:text-white p-1"><i class="fa-solid fa-xmark text-xl"></i></button>
+                </div>
+
+                <!-- Cart Items List -->
+                <div class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4" id="cart-items-container">
+                    <!-- Rendered by JS -->
+                </div>
+
+                <!-- Cart Footer & Checkout Button -->
+                <div class="p-4 sm:p-6 border-t border-slate-200 bg-slate-50 space-y-4">
+                    <div class="space-y-1 text-sm">
+                        <div class="flex justify-between text-slate-600">
+                            <span>Subtotal</span>
+                            <span id="cart-subtotal" class="font-semibold">৳0</span>
+                        </div>
+                        <div class="flex justify-between text-slate-600">
+                            <span>Shipping (Delivery)</span>
+                            <span id="cart-shipping" class="font-semibold">৳100</span>
+                        </div>
+                        <div class="flex justify-between text-base font-bold text-slate-900 pt-2 border-t border-slate-200">
+                            <span>Total</span>
+                            <span id="cart-total" class="text-brand-600">৳100</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openCheckoutModal()" id="checkout-btn" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-xl transition shadow flex items-center justify-center gap-2">
+                        Proceed to Checkout <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHECKOUT MODAL -->
+    <div id="checkout-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 hidden">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl overflow-y-auto max-h-[90vh]">
+            <div class="flex justify-between items-center pb-4 border-b border-slate-100 mb-4">
+                <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-brand-600"></i> Clinic Checkout
+                </h3>
+                <button onclick="closeCheckoutModal()" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+
+            <form id="checkout-form" onsubmit="processOrder(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Doctor / Clinic Name *</label>
+                    <input type="text" id="cust-name" required placeholder="Dr. Rahim / City Dental Clinic" class="w-full px-3.5 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-500 outline-none">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Mobile / WhatsApp *</label>
+                        <input type="tel" id="cust-phone" required placeholder="017XXXXXXXX" class="w-full px-3.5 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">District / City *</label>
+                        <select id="cust-city" required class="w-full px-3.5 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-500 outline-none bg-white">
+                            <option value="Rajshahi">Rajshahi (Local Delivery)</option>
+                            <option value="Dhaka">Dhaka</option>
+                            <option value="Chittagong">Chittagong</option>
+                            <option value="Khulna">Khulna</option>
+                            <option value="Other">Other District</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Delivery Address *</label>
+                    <textarea id="cust-address" required rows="2" placeholder="Chamber Address, Road No, Area" class="w-full px-3.5 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-500 outline-none"></textarea>
+                </div>
+
+                <!-- Payment Selection -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Select Payment Method *</label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label class="border-2 border-slate-200 rounded-xl p-3 flex flex-col items-center justify-center cursor-pointer hover:border-brand-500 transition has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50">
+                            <input type="radio" name="paymentMethod" value="COD" checked onclick="togglePaymentFields()" class="sr-only">
+                            <i class="fa-solid fa-hand-holding-dollar text-xl text-slate-700 mb-1"></i>
+                            <span class="text-xs font-bold text-slate-800">Cash on Delivery</span>
+                        </label>
+
+                        <label class="border-2 border-slate-200 rounded-xl p-3 flex flex-col items-center justify-center cursor-pointer hover:border-bkash transition has-[:checked]:border-bkash has-[:checked]:bg-pink-50">
+                            <input type="radio" name="paymentMethod" value="bKash" onclick="togglePaymentFields()" class="sr-only">
+                            <span class="text-lg font-black text-bkash mb-0.5">bKash</span>
+                            <span class="text-xs font-bold text-slate-800">Direct Payment</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- bKash Details Info Box -->
+                <div id="bkash-details" class="hidden bg-pink-50 border border-pink-200 rounded-xl p-4 space-y-2 text-xs">
+                    <p class="text-slate-800">Send money/cash-in total amount to our bKash Personal Number:</p>
+                    <div class="flex items-center justify-between bg-white px-3 py-2 rounded-lg border border-pink-200">
+                        <span class="font-mono font-bold text-slate-900 text-sm">01410093006</span>
+                        <span class="text-xs text-bkash font-semibold uppercase">bKash Personal</span>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mt-2 mb-1">bKash Transaction ID (TrxID) *</label>
+                        <input type="text" id="cust-trxid" placeholder="e.g. 9B7A6X123" class="w-full px-3.5 py-2 border border-pink-300 rounded-lg font-mono text-sm uppercase focus:ring-2 focus:ring-bkash outline-none">
+                    </div>
+                </div>
+
+                <!-- Summary -->
+                <div class="bg-slate-50 p-3 rounded-lg text-xs flex justify-between font-bold text-slate-700">
+                    <span>Grand Total:</span>
+                    <span id="checkout-grand-total" class="text-brand-700 text-sm">৳0</span>
+                </div>
+
+                <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3 rounded-xl transition shadow">
+                    Confirm & Place Order
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ADD/EDIT PRODUCT MODAL (ADMIN) -->
+    <div id="product-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 hidden">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl">
+            <div class="flex justify-between items-center pb-3 border-b border-slate-100 mb-4">
+                <h3 class="text-lg font-bold text-slate-800" id="product-modal-title">Add Dental Product</h3>
+                <button onclick="closeProductModal()" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+            </div>
+
+            <form id="product-form" onsubmit="saveProduct(event)" class="space-y-3 text-xs">
+                <input type="hidden" id="prod-id">
+                <div>
+                    <label class="block font-bold text-slate-700 uppercase mb-1">Product Name *</label>
+                    <input type="text" id="prod-name" required placeholder="e.g. SuperFlex NiTi Rotary Files" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none text-sm">
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-700 uppercase mb-1">Category *</label>
+                    <select id="prod-category" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none text-sm bg-white">
+                        <option value="Endodontics">Endodontics</option>
+                        <option value="Handpieces">Handpieces & Equipment</option>
+                        <option value="Restorative">Restorative & Composites</option>
+                        <option value="Burs & Polishers">Burs & Polishers</option>
+                        <option value="Orthodontics">Orthodontics</option>
+                    </select>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-bold text-slate-700 uppercase mb-1">Price (BDT ৳) *</label>
+                        <input type="number" id="prod-price" required min="1" placeholder="1200" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block font-bold text-slate-700 uppercase mb-1">Stock Status *</label>
+                        <select id="prod-stock" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none text-sm bg-white">
+                            <option value="true">In Stock</option>
+                            <option value="false">Out of Stock</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-700 uppercase mb-1">Icon / Image Badge</label>
+                    <select id="prod-icon" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none text-sm bg-white">
+                        <option value="fa-tooth">Tooth / General</option>
+                        <option value="fa-screwdriver text-brand-600">NiTi File / Drill</option>
+                        <option value="fa-fan">Air Polisher / Handpiece</option>
+                        <option value="fa-vial">Composite / Chemical</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 rounded-xl transition mt-4 text-sm">
+                    Save Product
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- AUTH MODAL -->
+    <div id="auth-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 hidden">
+        <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl text-center">
+            <div class="w-12 h-12 bg-brand-50 text-brand-600 rounded-full flex items-center justify-center mx-auto mb-3 text-xl">
+                <i class="fa-solid fa-user-doctor"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-1">Doctor Login Portal</h3>
+            <p class="text-xs text-slate-500 mb-4">Access fast re-ordering for your dental clinic</p>
+
+            <form onsubmit="handleCustomerLogin(event)" class="space-y-3 text-left">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number</label>
+                    <input type="tel" id="auth-phone" required placeholder="017XXXXXXXX" class="w-full px-3.5 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Password</label>
+                    <input type="password" required placeholder="••••••••" class="w-full px-3.5 py-2 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-500 outline-none">
+                </div>
+                <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 rounded-xl transition text-sm">Login</button>
+            </form>
+            <button onclick="toggleAuthModal()" class="text-xs text-slate-400 hover:text-slate-600 mt-4 block mx-auto">Close</button>
+        </div>
+    </div>
+
+    <!-- CUSTOM TOAST NOTIFICATION -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 bg-slate-900 text-white px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 transition-transform translate-y-20 opacity-0 duration-300">
+        <i id="toast-icon" class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toast-message" class="text-sm font-medium">Notification message</span>
+    </div>
+
+    <!-- APPLICATION JAVASCRIPT -->
+    <script>
+        // --- INITIAL DATA STORE ---
+        const DEFAULT_PRODUCTS = [
+            { id: 'prod-1', name: 'Gold Rotary NiTi Files (Assorted Set 6pcs)', category: 'Endodontics', price: 1450, inStock: true, icon: 'fa-screwdriver' },
+            { id: 'prod-2', name: 'High-Speed LED Air Turbine Handpiece', category: 'Handpieces', price: 3200, inStock: true, icon: 'fa-fan' },
+            { id: 'prod-3', name: 'Nano Hybrid Composite Resin Syringe (4g)', category: 'Restorative', price: 1850, inStock: true, icon: 'fa-vial' },
+            { id: 'prod-4', name: 'Dental Diamond Burs Kit (10 Pcs Set)', category: 'Burs & Polishers', price: 650, inStock: true, icon: 'fa-tooth' },
+            { id: 'prod-5', name: 'Prophy Air Polishing Unit (B4 Type)', category: 'Handpieces', price: 4500, inStock: false, icon: 'fa-fan' },
+            { id: 'prod-6', name: 'Orthodontic Niti Arch Wires (Pack of 10)', category: 'Orthodontics', price: 850, inStock: true, icon: 'fa-tooth' },
+            { id: 'prod-7', name: 'Etching Gel 37% Phosphoric Acid (3ml)', category: 'Restorative', price: 420, inStock: true, icon: 'fa-vial' },
+            { id: 'prod-8', name: 'Gutta Percha Points #25 0.04 Taper', category: 'Endodontics', price: 550, inStock: true, icon: 'fa-screwdriver' }
+        ];
+
+        const INITIAL_ORDERS = [
+            {
+                id: 'DS-1001',
+                customerName: 'Dr. Shahriar',
+                phone: '01711223344',
+                address: 'Hetem Khan, Rajshahi',
+                paymentMethod: 'bKash',
+                trxId: '9B7X8Y123',
+                total: 3400,
+                status: 'Processing',
+                date: '2026-03-28',
+                items: [{ id: 'prod-1', name: 'Gold Rotary NiTi Files', qty: 2, price: 1450 }]
+            }
+        ];
+
+        // --- LOCAL STORAGE STATE ENGINE ---
+        let products = JSON.parse(localStorage.getItem('dsh_products')) || DEFAULT_PRODUCTS;
+        let orders = JSON.parse(localStorage.getItem('dsh_orders')) || INITIAL_ORDERS;
+        let cart = [];
+        let activeCategory = 'All';
+
+        // --- CORE APPLICATION INITIALIZATION ---
+        window.addEventListener('DOMContentLoaded', () => {
+            renderCategories();
+            renderProducts();
+            updateCartUI();
+            renderAdminTables();
+        });
+
+        function saveData() {
+            localStorage.setItem('dsh_products', JSON.stringify(products));
+            localStorage.setItem('dsh_orders', JSON.stringify(orders));
+        }
+
+        // --- NAVIGATION & TABS ---
+        function switchTab(tab) {
+            ['shop', 'tracking', 'admin'].forEach(t => {
+                document.getElementById(`view-${t}`).classList.add('hidden');
+                const navBtn = document.getElementById(`nav-${t}`);
+                if(navBtn) navBtn.className = "hover:text-brand-600 transition py-1 border-b-2 border-transparent text-slate-600";
+            });
+
+            document.getElementById(`view-${tab}`).classList.remove('hidden');
+            const activeNav = document.getElementById(`nav-${tab}`);
+            if(activeNav) activeNav.className = "hover:text-brand-600 transition py-1 border-b-2 border-brand-600 font-semibold text-brand-600";
+        }
+
+        function switchAdminSubTab(sub) {
+            if(sub === 'orders') {
+                document.getElementById('admin-orders-section').classList.remove('hidden');
+                document.getElementById('admin-products-section').classList.add('hidden');
+                document.getElementById('admin-tab-orders').className = "pb-3 border-b-2 border-brand-600 text-brand-600 flex items-center gap-2";
+                document.getElementById('admin-tab-products').className = "pb-3 border-b-2 border-transparent hover:text-brand-600 text-slate-600 flex items-center gap-2";
+            } else {
+                document.getElementById('admin-orders-section').classList.add('hidden');
+                document.getElementById('admin-products-section').classList.remove('hidden');
+                document.getElementById('admin-tab-products').className = "pb-3 border-b-2 border-brand-600 text-brand-600 flex items-center gap-2";
+                document.getElementById('admin-tab-orders').className = "pb-3 border-b-2 border-transparent hover:text-brand-600 text-slate-600 flex items-center gap-2";
+            }
+        }
+
+        // --- RENDER PRODUCTS & CATEGORIES ---
+        function renderCategories() {
+            const categories = ['All', ...new Set(products.map(p => p.category))];
+            const container = document.getElementById('category-pills');
+            container.innerHTML = categories.map(cat => `
+                <button onclick="filterCategory('${cat}')" class="px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition ${activeCategory === cat ? 'bg-brand-600 text-white shadow-sm' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}">
+                    ${cat}
+                </button>
+            `).join('');
+        }
+
+        function filterCategory(cat) {
+            activeCategory = cat;
+            renderCategories();
+            renderProducts();
+        }
+
+        function renderProducts() {
+            const searchQuery = document.getElementById('search-input').value.toLowerCase();
+            const grid = document.getElementById('product-grid');
+
+            const filtered = products.filter(p => {
+                const matchesCat = activeCategory === 'All' || p.category === activeCategory;
+                const matchesSearch = p.name.toLowerCase().includes(searchQuery) || p.category.toLowerCase().includes(searchQuery);
+                return matchesCat && matchesSearch;
+            });
+
+            document.getElementById('catalog-title').innerText = activeCategory === 'All' ? 'All Products' : `${activeCategory} Products`;
+            document.getElementById('product-count-badge').innerText = `Showing ${filtered.length} items`;
+
+            if(filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full py-12 text-center text-slate-400">
+                        <i class="fa-solid fa-box-open text-4xl mb-2"></i>
+                        <p class="text-sm">No products found matching your search.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtered.map(prod => `
+                <div class="bg-white border border-slate-200 rounded-2xl p-4 flex flex-col justify-between hover:shadow-lg transition group relative">
+                    <!-- Stock Badge -->
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${prod.inStock ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-rose-50 text-rose-700 border border-rose-200'}">
+                            ${prod.inStock ? 'In Stock' : 'Out of Stock'}
+                        </span>
+                        <span class="text-xs text-slate-400 font-medium">${prod.category}</span>
+                    </div>
+
+                    <!-- Visual Icon Graphic -->
+                    <div class="w-full h-32 bg-slate-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand-50 transition">
+                        <i class="fa-solid ${prod.icon || 'fa-tooth'} text-4xl text-brand-600"></i>
+                    </div>
+
+                    <!-- Details -->
+                <div class="space-y-1 mb-4">
+                    <h4 class="font-bold text-slate-800 text-sm leading-snug line-clamp-2">${prod.name}</h4>
+                    <div class="text-lg font-extrabold text-brand-900">৳${prod.price.toLocaleString()}</div>
+                </div>
+
+                <!-- Actions -->
+                <button onclick="addToCart('${prod.id}')" ${!prod.inStock ? 'disabled' : ''} class="w-full py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 ${prod.inStock ? 'bg-brand-600 hover:bg-brand-700 text-white shadow' : 'bg-slate-200 text-slate-400 cursor-not-allowed'}">
+                    <i class="fa-solid fa-cart-plus"></i> ${prod.inStock ? 'Add to Cart' : 'Unavailable'}
+                </button>
+            </div>
+        `;
+    }
+
+    grid.innerHTML = filtered.map(prod => renderProductCard(prod)).join('');
+}
+
+        // --- CART SYSTEM ---
+        function toggleCartDrawer() {
+            document.getElementById('cart-drawer').classList.toggle('hidden');
+        }
+
+        function addToCart(prodId) {
+            const product = products.find(p => p.id === prodId);
+            if(!product || !product.inStock) return;
+
+            const existing = cart.find(item => item.id === prodId);
+            if(existing) {
+                existing.qty++;
+            } else {
+                cart.push({ ...product, qty: 1 });
+            }
+
+            updateCartUI();
+            showToast(`Added "${product.name}" to cart`);
+        }
+
+        function updateCartQty(prodId, delta) {
+            const item = cart.find(i => i.id === prodId);
+            if(item) {
+                item.qty += delta;
+                if(item.qty <= 0) {
+                    cart = cart.filter(i => i.id !== prodId);
+                }
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const container = document.getElementById('cart-items-container');
+            const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const shipping = subtotal > 0 ? 100 : 0;
+            const total = subtotal + shipping;
+
+            document.getElementById('cart-count').innerText = totalCount;
+            document.getElementById('cart-subtotal').innerText = `৳${subtotal.toLocaleString()}`;
+            document.getElementById('cart-shipping').innerText = `৳${shipping}`;
+            document.getElementById('cart-total').innerText = `৳${total.toLocaleString()}`;
+            document.getElementById('checkout-grand-total').innerText = `৳${total.toLocaleString()}`;
+
+            if(cart.length === 0) {
+            <tbody id="admin-products-table" class="divide-y divide-slate-100">
+                <!-- Rendered via JS -->
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- ADD/EDIT PRODUCT MODAL (ADMIN) -->
+<div id="product-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 hidden">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl">
+        <div class="flex justify-between items-center pb-3 border-b border-slate-100 mb-4">
+            <h3 class="text-lg font-bold text-slate-800" id="product-modal-title">Add Dental Product</h3>
+            <button onclick="closeProductModal()" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+        </div>
+
+        <form id="product-form" onsubmit="saveProduct(event)" class="space-y-3 text-xs">
+            <input type="hidden" id="prod-id">
+            <div>
+                <label class="block font-bold text-slate-700 uppercase mb-1">Product Name *</label>
+                <input type="text" id="prod-name" required placeholder="e.g. SuperFlex NiTi Rotary Files" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none text-sm">
+            </div>
+            <div>
+                <label class="block font-bold text-slate-700 uppercase mb-1">Category *</label>
+                <select id="prod-category" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none text-sm bg-white">
+                    <option value="Endodontics">Endodontics</option>
+                    <option value="Handpieces">Handpieces & Equipment</option>
+                    <option value="Restorative">Restorative & Composites</option>
+                    <option value="Burs & Polishers">Burs & Polishers</option>
+                    <option value="Orthodontics">Orthodontics</option>
+                </select>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <div>
+                    <label class="block font-bold text-slate-700 uppercase mb-1">Price (BDT ৳) *</label>
+                    <input type="number" id="prod-price" required min="1" placeholder="1200" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none text-sm">
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-700 uppercase mb-1">Stock Status *</label>
+                    <select id="prod-stock" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none text-sm bg-white">
+                        <option value="true">In Stock</option>
+                        <option value="false">Out of Stock</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Product Image Option: Direct File Upload or Image URL -->
+            <div>
+                <label class="block font-bold text-slate-700 uppercase mb-1">Upload Product Photo (Device/Gallery)</label>
+                <input type="file" id="prod-image-file" accept="image/*" onchange="previewImageFile(event)" class="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs file:mr-3 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-brand-50 file:text-brand-700 hover:file:bg-brand-100 cursor-pointer">
+            </div>
+
+            <div>
+                <label class="block font-bold text-slate-700 uppercase mb-1">Or Paste Image URL (Optional)</label>
+                <input type="url" id="prod-image-url" placeholder="https://example.com/photo.jpg" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none text-xs">
+            </div>
+
+            <!-- Image Preview Box -->
+            <div id="image-preview-container" class="hidden flex items-center gap-3 p-2 border border-slate-200 rounded-lg bg-slate-50">
+                <img id="image-preview" src="" alt="Preview" class="w-12 h-12 object-cover rounded-md border border-slate-300">
+                <span class="text-[11px] text-slate-500 font-medium">Selected Photo Preview</span>
+            </div>
+
+            <div>
+                <label class="block font-bold text-slate-700 uppercase mb-1">Icon Badge (If Photo not available)</label>
+                <select id="prod-icon" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none text-sm bg-white">
+                    <option value="fa-tooth">Tooth / General</option>
+                    <option value="fa-screwdriver text-brand-600">NiTi File / Drill</option>
+                    <option value="fa-fan">Air Polisher / Handpiece</option>
+                    <option value="fa-vial">Composite / Chemical</option>
+                </select>
+            </div>
+
+            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 rounded-xl transition mt-4 text-sm">
+                Save Product
+            </button>
+        </form>
+    </div>
+</div>
+                        <div>
+                            <h5 class="text-xs font-bold text-slate-800 line-clamp-1">${item.name}</h5>
+                            <span class="text-xs text-brand-700 font-semibold">৳${item.price}</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="updateCartQty('${item.id}', -1)" class="w-6 h-6 bg-slate-100 hover:bg-slate-200 rounded text-xs font-bold">-</button>
+                        <span class="text-xs font-bold w-4 text-center">${item.qty}</span>
+                        <button onclick="updateCartQty('${item.id}', 1)" class="w-6 h-6 bg-slate-100 hover:bg-slate-200 rounded text-xs font-bold">+</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // --- CHECKOUT & PAYMENT ---
+        function openCheckoutModal() {
+            toggleCartDrawer();
+            document.getElementById('checkout-modal').classList.remove('hidden');
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkout-modal').classList.add('hidden');
+        }
+
+        function togglePaymentFields() {
+            const method = document.querySelector('input[name="paymentMethod"]:checked').value;
+            const bkashBox = document.getElementById('bkash-details');
+            if(method === 'bKash') {
+                bkashBox.classList.remove('hidden');
+                document.getElementById('cust-trxid').required = true;
+            } else {
+                bkashBox.classList.add('hidden');
+                document.getElementById('cust-trxid').required = false;
+            }
+        }
+
+        function processOrder(e) {
+            e.preventDefault();
+            if(cart.length === 0) return;
+
+            const name = document.getElementById('cust-name').value;
+            const phone = document.getElementById('cust-phone').value;
+            const city = document.getElementById('cust-city').value;
+            const address = document.getElementById('cust-address').value;
+            const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+            const trxId = paymentMethod === 'bKash' ? document.getElementById('cust-trxid').value : 'N/A';
+
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            const grandTotal = subtotal + 100;
+
+            const newOrderId = 'DS-' + Math.floor(1000 + Math.random() * 9000);
+
+            const newOrder = {
+                id: newOrderId,
+                customerName: name,
+                phone: phone,
+                address: `${address}, ${city}`,
+                paymentMethod: paymentMethod,
+                trxId: trxId,
+                total: grandTotal,
+                status: 'Pending',
+                date: new Date().toISOString().split('T')[0],
+                items: [...cart]
+            };
+
+            orders.unshift(newOrder);
+            saveData();
+
+            cart = [];
+            updateCartUI();
+            closeCheckoutModal();
+            renderAdminTables();
+
+            showToast(`Order Placed! ID: ${newOrderId}`);
+            switchTab('tracking');
+            document.getElementById('track-id-input').value = newOrderId;
+            trackOrder();
+        }
+
+        // --- ORDER TRACKING ---
+        function trackOrder() {
+            const orderId = document.getElementById('track-id-input').value.trim().toUpperCase();
+            const resultBox = document.getElementById('tracking-result');
+            
+            const order = orders.find(o => o.id.toUpperCase() === orderId);
+
+            resultBox.classList.remove('hidden');
+
+            if(!order) {
+                resultBox.innerHTML = `
+                    <div class="p-4 bg-rose-50 text-rose-700 rounded-xl text-xs font-semibold text-center border border-rose-200">
+                        No order found with ID: ${orderId}. Please check your order reference.
+                    </div>
+                `;
+                return;
+            }
+
+            const statusColors = {
+                'Pending': 'bg-amber-100 text-amber-800 border-amber-300',
+                'Processing': 'bg-blue-100 text-blue-800 border-blue-300',
+                'Shipped': 'bg-indigo-100 text-indigo-800 border-indigo-300',
+                'Delivered': 'bg-emerald-100 text-emerald-800 border-emerald-300'
+            };
+
+            resultBox.innerHTML = `
+                <div class="space-y-4 text-xs">
+                    <div class="flex justify-between items-center bg-slate-50 p-3 rounded-xl border border-slate-200">
+                        <div>
+                            <span class="text-slate-500 block">Order Reference</span>
+                            <span class="font-mono font-bold text-sm text-slate-900">${order.id}</span>
+                        </div>
+                        <span class="px-3 py-1 rounded-full font-bold border ${statusColors[order.status] || 'bg-slate-100'}">
+                            ${order.status}
+                        </span>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2 text-slate-600">
+                        <div><strong>Doctor:</strong> ${order.customerName}</div>
+                        <div><strong>Phone:</strong> ${order.phone}</div>
+                        <div><strong>Delivery:</strong> ${order.address}</div>
+                        <div><strong>Payment:</strong> ${order.paymentMethod} (${order.trxId})</div>
+                    </div>
+
+                    <div class="border-t border-slate-100 pt-2">
+                        <strong class="block text-slate-700 mb-1">Ordered Items:</strong>
+                        <ul class="space-y-1">
+                            ${order.items.map(i => `<li class="flex justify-between text-slate-600"><span>• ${i.name} (x${i.qty})</span><span>৳${i.price * i.qty}</span></li>`).join('')}
+                        </ul>
+                        <div class="flex justify-between font-bold text-slate-900 border-t border-slate-200 pt-2 mt-2">
+                            <span>Total BDT:</span>
+                            <span class="text-brand-600">৳${order.total.toLocaleString()}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        // --- CORE APPLICATION INITIALIZATION ---
+        window.addEventListener('DOMContentLoaded', () => {
+            renderCategories();
+            renderProducts();
+            updateCartUI();
+            renderAdminTables();
+        });
+
+        // Store loaded file image base64 temporarily
+        let currentUploadedImageBase64 = '';
+
+        function previewImageFile(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    currentUploadedImageBase64 = e.target.result;
+                    const preview = document.getElementById('image-preview');
+                    const container = document.getElementById('image-preview-container');
+                    preview.src = currentUploadedImageBase64;
+                    container.classList.remove('hidden');
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function renderProductCard(prod) {
+            const hasCustomImage = prod.imageUrl && prod.imageUrl.trim() !== '';
+            
+            return `
+                <div class="bg-white border border-slate-200 rounded-2xl p-4 flex flex-col justify-between hover:shadow-lg transition group relative">
+                    <!-- Stock Badge -->
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${prod.inStock ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-rose-50 text-rose-700 border border-rose-200'}">
+                            ${prod.inStock ? 'In Stock' : 'Out of Stock'}
+                        </span>
+                        <span class="text-xs text-slate-400 font-medium">${prod.category}</span>
+                    </div>
+
+                    <!-- Visual Image/Icon Graphic -->
+                    <div class="w-full h-36 bg-slate-50 rounded-xl flex items-center justify-center mb-4 group-hover:bg-brand-50 transition overflow-hidden">
+                        ${hasCustomImage 
+                            ? `<img src="${prod.imageUrl}" alt="${prod.name}" class="w-full h-full object-cover rounded-xl transition transform group-hover:scale-105" onerror="this.onerror=null; this.src='https://placehold.co/300x200/0f5b99/ffffff?text=Dental+Item';">` 
+                            : `<i class="fa-solid ${prod.icon || 'fa-tooth'} text-4xl text-brand-600"></i>`
+                        }
+                    </div>
+
+                    <!-- Details -->
+                    <div class="space-y-1 mb-4">
+                        <h4 class="font-bold text-slate-800 text-sm leading-snug line-clamp-2">${prod.name}</h4>
+                        <div class="text-lg font-extrabold text-brand-900">৳${prod.price.toLocaleString()}</div>
+                    </div>
+
+                    <!-- Actions -->
+                    <button onclick="addToCart('${prod.id}')" ${!prod.inStock ? 'disabled' : ''} class="w-full py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 ${prod.inStock ? 'bg-brand-600 hover:bg-brand-700 text-white shadow' : 'bg-slate-200 text-slate-400 cursor-not-allowed'}">
+                        <i class="fa-solid fa-cart-plus"></i> ${prod.inStock ? 'Add to Cart' : 'Unavailable'}
+                    </button>
+                </div>
+            `;
+        }
+
+        // --- PRODUCT FORM (ADMIN) ---
+        function openAddProductModal() {
+            document.getElementById('product-modal-title').innerText = 'Add Dental Product';
+            document.getElementById('prod-id').value = '';
+            document.getElementById('product-form').reset();
+            currentUploadedImageBase64 = '';
+            document.getElementById('image-preview-container').classList.add('hidden');
+            document.getElementById('product-modal').classList.remove('hidden');
+        }
+
+        function openEditProductModal(prodId) {
+            const prod = products.find(p => p.id === prodId);
+            if(!prod) return;
+
+            document.getElementById('product-modal-title').innerText = 'Edit Product';
+            document.getElementById('prod-id').value = prod.id;
+            document.getElementById('prod-name').value = prod.name;
+            document.getElementById('prod-category').value = prod.category;
+            document.getElementById('prod-price').value = prod.price;
+            document.getElementById('prod-stock').value = prod.inStock.toString();
+            document.getElementById('prod-icon').value = prod.icon || 'fa-tooth';
+            document.getElementById('prod-image-url').value = prod.imageUrl || '';
+            
+            currentUploadedImageBase64 = prod.imageUrl || '';
+            if (currentUploadedImageBase64) {
+                document.getElementById('image-preview').src = currentUploadedImageBase64;
+                document.getElementById('image-preview-container').classList.remove('hidden');
+            } else {
+                document.getElementById('image-preview-container').classList.add('hidden');
+            }
+
+            document.getElementById('product-modal').classList.remove('hidden');
+        }
+
+        function saveProduct(e) {
+            e.preventDefault();
+            const id = document.getElementById('prod-id').value;
+            const name = document.getElementById('prod-name').value;
+            const category = document.getElementById('prod-category').value;
+            const price = parseFloat(document.getElementById('prod-price').value);
+            const inStock = document.getElementById('prod-stock').value === 'true';
+            const icon = document.getElementById('prod-icon').value;
+            const urlInput = document.getElementById('prod-image-url').value.trim();
+
+            // Priority to direct uploaded file, fallback to URL input
+            const finalImageUrl = currentUploadedImageBase64 || urlInput;
+
+            if(id) {
+                // Update
+                const prod = products.find(p => p.id === id);
+                if(prod) {
+                    prod.name = name;
+                    prod.category = category;
+                    prod.price = price;
+                    prod.inStock = inStock;
+                    prod.icon = icon;
+                    prod.imageUrl = finalImageUrl;
+                }
+            } else {
+                // Add
+                const newId = 'prod-' + Date.now();
+                products.push({ id: newId, name, category, price, inStock, icon, imageUrl: finalImageUrl });
+            }
+
+            saveData();
+            renderCategories();
+            renderProducts();
+            renderAdminTables();
+            closeProductModal();
+            showToast('Product saved successfully!');
+        }
+
+        function deleteProduct(prodId) {
+            products = products.filter(p => p.id !== prodId);
+            saveData();
+            renderCategories();
+            renderProducts();
+            renderAdminTables();
+            showToast('Product removed');
+        }
+
+        // --- CUSTOMER AUTH ---
+        function toggleAuthModal() {
+            document.getElementById('auth-modal').classList.toggle('hidden');
+        }
+
+        function handleCustomerLogin(e) {
+            e.preventDefault();
+            toggleAuthModal();
+            document.getElementById('user-badge').classList.remove('hidden');
+            showToast('Welcome back, Doctor!');
+        }
+
+        // --- UTILITY TOAST NOTIFICATION ---
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').innerText = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
